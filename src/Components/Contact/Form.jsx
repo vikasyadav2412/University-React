@@ -9,7 +9,7 @@ function Form() {
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", "fd4340b8-4516-4bba-bd0b-b20668e42c58");
+    formData.append("access_key", "1e3205c5-fc3c-48a4-a6e8-0556850925f9");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -35,9 +35,10 @@ function Form() {
           <input type="tel" name="phone" id="phone" placeholder='Enter your phone number ' required/>
           <label>Write your message here</label>
           <textarea name="message" rows="6" placeholder='Enter your message' required></textarea>
+        <span >{result}</span>
+
           <button type='submit' className='btn dark-btn'>Submit now<img src="../../public/photos/white-arrow.png" alt="" /></button>
         </form>
-        <span>{result}</span>
     </>
   )
 }
